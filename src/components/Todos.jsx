@@ -1,24 +1,9 @@
-import React, { useState } from 'react'
-import TodoForm from './TodoForm'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import TodoForm from './TodoForm';
 
 const Todos = () => {
-    const [todo, setTodos] = useState([
-        {
-            id: 1,
-            title: 'Viec 1',
-            completed: false,
-        },
-        {
-            id: 2,
-            title: 'Viec 2',
-            completed: false,
-        },
-        {
-            id: 3,
-            title: 'Viec 3',
-            completed: false,
-        },
-    ])
 
     return (
         <div className='todo-list'>
