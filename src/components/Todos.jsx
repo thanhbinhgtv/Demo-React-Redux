@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import TodoForm from './TodoForm';
 
-const Todos = () => {
+const Todos = ({ todos }) => {
 
     return (
         <div className='todo-list'>
             <TodoForm />
             <ul>
-                {todo.map(todo =>
+                {todos.map(todo =>
                     <li key={todo.id}>
                         {todo.title}
                         <input type='checkbox' />
@@ -21,4 +21,12 @@ const Todos = () => {
     )
 }
 
-export default Todos
+Todos.prototype = {
+    todos: PropTypes.array.isRequired
+}
+
+const mapStateToProps = state => ({
+    todos: state.myTodos.todos
+})
+
+export default connect(mapStateToProps, {})(Todos)
