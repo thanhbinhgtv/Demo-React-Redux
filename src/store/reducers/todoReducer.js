@@ -24,7 +24,7 @@ const todoReducer = (state = initialState, action) => {
             return {
                 ...state,
                 todos: state.todos.map(todo => {
-                    if(todo.id = action.payload) todo.completed = !todo.completed
+                    if(todo.id == action.payload) todo.completed = !todo.completed
                     return todo;
                 })
             }

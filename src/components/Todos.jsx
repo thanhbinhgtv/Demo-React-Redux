@@ -11,7 +11,7 @@ const Todos = ({ todos, markComplate }) => {
             <TodoForm />
             <ul>
                 {todos.map(todo =>
-                    <li key={todo.id}>
+                    <li key={todo.id} className={todo.completed ? 'completed' : ''}>
                         {todo.title}
                         <input type='checkbox' onChange={() => markComplate(todo.id)} />
                         <button>Delete</button>
