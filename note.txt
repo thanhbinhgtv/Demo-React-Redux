@@ -1,3 +1,4 @@
 Learn at : https://www.youtube.com/watch?v=nlDl_TdcAoA&list=PLKzNGvIJtUDag3UK14dvOvaHBBvSGSY8U&index=2
 Css : index.css & app.css
 install : npm i redux react-redux redux-thunk redux-devtools-extension axios
+          npm i uuid
